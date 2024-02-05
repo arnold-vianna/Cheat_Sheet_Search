@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheat Sheet Search</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Cheat Sheet Search</h1>
+        <div class="d-flex justify-content-between mb-4">
+            <button id="theme-toggle" class="btn btn-secondary">Toggle Theme</button>
+            <select id="json-files" class="form-control">
+                <option value="">All JSON files</option>
+            </select>
+        </div>
+        <form id="search-form" class="mb-4">
+            <div class="input-group">
+                <input type="text" id="query" name="query" class="form-control" placeholder="Enter a command or search term">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search Command</button>
+                    <button id="clear-search" class="btn btn-secondary" type="button">Clear Search</button>
+                </div>
+            </div>
+        </form>
+        <form id="search-description-form" class="mb-4">
+            <div class="input-group">
+                <input type="text" id="query-description" name="query-description" class="form-control" placeholder="Enter a description or search term">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit">Search Description</button>
+                    <button id="clear-search-description" class="btn btn-secondary" type="button">Clear Search</button>
+                </div>
+            </div>
+        </form>
+        <div id="results" class="row">
+            <!-- Cheat sheets will be loaded here -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script>
+        // Function to copy command to clipboard
+        var copyToClipboard = function(event) {
+            var command = event.target.dataset.command;
+            navigator.clipboard.writeText(command).then(function() {
+                alert('Command copied to clipboard: ' + command);
+            }, function(err) {
+                console.error('Could not copy command: ', err);
+            });
+        };
+
+        // Function to perform the search
+        var performSearch = function(event, searchType) {
+            // ... existing search logic ...
+
+            // Append the search results to the results div
+            searchResults.forEach(function([command, description]) {
+                var cheatSheetDiv = document.createElement('div');
+                cheatSheetDiv.className = 'col-md-4 mb-4';
+                cheatSheetDiv.innerHTML = `
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                ${command}
+                                <button class="btn btn-sm btn-primary copy-button" data-command="${command}">Copy</button>
+                            </h5>
+                            <p class="card-text">${description}</p>
+                        </div>
+                    </div>
+                `;
+                resultsDiv.appendChild(cheatSheetDiv);
+
+                // Attach the copy event listener to the new copy button
+                var copyButton = cheatSheetDiv.querySelector('.copy-button');
+                copyButton.addEventListener('click', copyToClipboard);
+            });
+        };
+
+        // ... existing event listeners and other functions ...
+    </script>
+</body>
+</html>

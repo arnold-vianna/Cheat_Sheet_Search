@@ -1,0 +1,17 @@
+/* Dark theme */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-theme .card {
+    background-color: #444;
+}
+
+.dark-theme .card-title {
+    color: #fff;
+}
+
+.dark-theme .card-text {
+    color: #ccc;
+}
