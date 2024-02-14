@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/copycat/Desktop/nmap_flask/venv"
+VIRTUAL_ENV="/home/copycat/Desktop/test/Cheat_Sheet_Search/venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

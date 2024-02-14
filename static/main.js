@@ -83,14 +83,14 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // Function to copy command to clipboard
-    var copyToClipboard = function(event) {
-        var command = event.target.dataset.command;
-        navigator.clipboard.writeText(command).then(function() {
-            alert('Command copied to clipboard: ' + command);
-        }, function(err) {
-            console.error('Could not copy command: ', err);
-        });
-    };
+var copyToClipboard = function(event) {
+    var command = event.target.dataset.command;
+    navigator.clipboard.writeText(command).then(function() {
+        // alert('Command copied to clipboard: ' + command);
+    }, function(err) {
+        console.error('Could not copy command: ', err);
+    });
+};
 
     // Attach event listeners to the theme toggle button, search form, and clear search button
     document.getElementById('theme-toggle').addEventListener('click', toggleDarkTheme);

@@ -1,0 +1,16 @@
+{
+    "hydra -l <username> -P <password_file> -f <ip> <service>": "Brute force a service with a list of usernames and passwords.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service>": "Brute force a service on a specific port.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -t <seconds>": "Set a timeout for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -T <threads>": "Set the number of threads for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -v": "Enable verbose output.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -e <module>": "Specify a module to use for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -M <subnet_file>": "Specify a subnet to use for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -x <proxy:port>": "Specify a proxy to use for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -X <proxy:port:username:password>": "Specify proxy credentials for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -H <header>": "Specify a custom HTTP header for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> -m <path>": "Specify a path for digest authentication.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-post-form <path>": "Specify a POST request for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get-form <path>": "Specify a GET request for the brute force attempt.",
+    "hydra -l <username> -P <password_file> -f -s <port> <ip> <service> http-get <path>": "Specify a GET request for the brute force attempt."
+}
