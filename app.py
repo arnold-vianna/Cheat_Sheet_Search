@@ -1,3 +1,9 @@
+#######################################################
+# Author: Arnold Vianna  
+# https://github.com/arnold-vianna
+# https://arnold-vianna.github.io/
+#######################################################
+
 from flask import Flask, render_template, jsonify, request
 import json
 import os
@@ -35,3 +41,4 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)

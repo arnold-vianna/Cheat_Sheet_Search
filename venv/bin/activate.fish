@@ -33,7 +33,7 @@ end
 # Unset irrelevant variables.
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/copycat/Desktop/test/Cheat_Sheet_Search/venv"
+set -gx VIRTUAL_ENV "/home/copycat/Desktop/nmap_flask/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH
