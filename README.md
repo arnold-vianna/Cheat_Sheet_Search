@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-* https://cheet-sheet-demo.arnold-tech.online/
+* https://demo.arnold-tech.online/
 
 ## Key Features 
 * Add more cheat sheets fast & easy
