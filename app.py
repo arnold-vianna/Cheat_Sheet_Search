@@ -1,19 +1,23 @@
 #######################################################
-# Author: Arnold Vianna  
+# Author: Arnold Vianna
 # https://github.com/arnold-vianna
 # https://arnold-vianna.github.io/
 #######################################################
 
-from flask import Flask, render_template, jsonify, request
 import json
 import os
+from flask import Flask, render_template, jsonify, request
 
 app = Flask(__name__)
 
 # Function to load JSON data from a file
 def load_json_data(filename):
-    with open(filename, 'r') as f:
-        return json.load(f)
+    if os.path.exists(filename):
+        with open(filename, 'r') as f:
+            return json.load(f)
+    else:
+        # Handle the case where the file doesn't exist
+        return jsonify({"error": "File not found"})
 
 # Endpoint to get all JSON filenames
 @app.route('/get_json_files')
@@ -21,7 +25,7 @@ def get_json_files():
     json_files = [f for f in os.listdir('.') if f.endswith('.json')]
     return jsonify(json_files)
 
-# Endpoint to get JSON data for a specific file or all data if no file is specified
+# Endpoint to get JSON data for a specific file or all data if no filename is specified
 @app.route('/get_json_data', methods=['POST'])
 def get_json_data():
     filename = request.json.get('filename')
@@ -40,5 +44,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    app.run(host="0.0.0.0", port=5000)
+    # Run the Flask app on host '0.0.0.0' (all network interfaces) and port 9898
+    app.run(host="127.0.0.1", port=9123, debug=True)
