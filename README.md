@@ -24,7 +24,26 @@
 * run with 4 commands 
 
 
-## Install Via Docker
+
+## Install Via Docker Without The Github Repo
+
+
+```console
+docker pull arnoldvianna/cheat_sheet
+```
+
+```console
+docker run -d -p 5051:5000 arnoldvianna/cheat_sheet
+```
+
+```console
+http://0.0.0.0:5051/
+```
+
+
+
+
+## Install Via Docker With The Github Repo
 
 ```console
 git clone https://github.com/arnold-vianna/Cheat_Sheet_Search.git
@@ -66,7 +85,7 @@ python3 app.py
 ```
 
 ```console
-http://127.0.0.1:5000
+http://127.0.0.1:9123
 ```
 
 ## Usage
