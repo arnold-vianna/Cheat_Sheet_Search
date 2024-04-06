@@ -44,7 +44,7 @@ python3 app.py
 ```
 
 ```console
-http://127.0.0.1:5000
+http://127.0.0.1:9123
 ```
 
 
@@ -55,7 +55,7 @@ http://127.0.0.1:5000
 * Remeber to change ip and port as needed 
 
 ```console
-nohup gunicorn -w 4 -b 192.168.1.5:5000 app:app &
+nohup gunicorn -w 4 -b 192.168.1.5:9123 app:app &
 ```
 
 * To stop
