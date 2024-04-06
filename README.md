@@ -12,11 +12,9 @@
 
 <a href="https://imgur.com/ixbbiW2"><img src="https://i.imgur.com/ixbbiW2.png" title="source: imgur.com" /></a>
 
-## Live Demo
-
-* https://demo.arnold-tech.online/
-
 ## Key Features 
+* No database needed all cheat sheet are in .json format
+
 * Add more cheat sheets fast & easy
 
 * Search By Command or Description or by 
@@ -26,9 +24,7 @@
 * run with 4 commands 
 
 
-
-
-## Install & run
+## Install Via Docker
 
 ```console
 git clone https://github.com/arnold-vianna/Cheat_Sheet_Search.git
@@ -38,32 +34,40 @@ git clone https://github.com/arnold-vianna/Cheat_Sheet_Search.git
 cd Cheat_Sheet_Search
 ```
 
+```console
+docker-compose up -d
+```
+
+```console
+http://127.0.0.1:5100/
+```
+
+
+
+
+
+
+## Install On Linux
+
+```console
+git clone https://github.com/arnold-vianna/Cheat_Sheet_Search.git
+```
+
+```console
+cd Cheat_Sheet_Search
+```
+
+```console
+pip install -r requirements.txt
+```
 
 ```console
 python3 app.py
 ```
 
 ```console
-http://127.0.0.1:9123
+http://127.0.0.1:5000
 ```
-
-
-## use with gunicorn
-
-* To use out of in the background 
-
-* Remeber to change ip and port as needed 
-
-```console
-nohup gunicorn -w 4 -b 192.168.1.5:9123 app:app &
-```
-
-* To stop
-
-```console
-pkill gunicorn
-```
-
 
 ## Usage
 
