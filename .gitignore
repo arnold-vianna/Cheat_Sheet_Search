@@ -1,0 +1,45 @@
+# Python-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+
+
+# Environment files
+.env
+.env.local
+*.env
+
+# Virtual environment (if you use one locally)
+venv/
+.env/
+env/
+
+# Docker-related ignores
+Dockerfile.bak
+*.dockerignore
+docker-compose.yml.bak
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Git itself
+.git/
+.gitignore.bak

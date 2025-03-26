@@ -1,25 +1,22 @@
-# Use an official lightweight Python image.
-# alpine is much smaller than the default image
-FROM python:3.10-alpine
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
 
-# Install git
-RUN apk update && apk add git
-
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY . /app
-
-# Install any needed packages specified in requirements.txt
+# Copy requirements file and install dependencies
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Make port 5000 available to the world outside this container
-EXPOSE 5100
+# Copy the rest of the application code
+COPY . .
 
-# Define environment variable
-ENV FLASK_APP=app.py
-ENV FLASK_RUN_HOST=0.0.0.0
+# Expose the port Gunicorn will run on
+EXPOSE 8010
 
-# Run app.py when the container launches
-CMD ["flask", "run"]
+# Set environment variables (optional defaults)
+ENV GUNICORN_WORKERS=4
+ENV GUNICORN_TIMEOUT=30
+
+# Command to run Gunicorn
+CMD ["sh", "-c", "gunicorn --workers $GUNICORN_WORKERS --timeout $GUNICORN_TIMEOUT --bind 0.0.0.0:8010 app:app"]

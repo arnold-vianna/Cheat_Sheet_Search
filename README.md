@@ -10,16 +10,16 @@
 
 # Cheat Sheet Search Script With Web-UI
 
-<a href="https://imgur.com/ixbbiW2"><img src="https://i.imgur.com/ixbbiW2.png" title="source: imgur.com" /></a>
+<a href="https://imgur.com/heaERZL"><img src="https://imgur.com/heaERZL.png" title="source: imgur.com" /></a>
 
 ## Key Features 
-* No database needed all cheat sheet are in .json format
+* Database is all Preinstalled Mysqlit
 
 * Add more cheat sheets fast & easy
 
 * Search By Command or Description or by 
 
-* Filter by cheat sheet 
+* Filter by theme 
 
 * run with 4 commands 
 
@@ -81,35 +81,35 @@ pip install -r requirements.txt
 ```
 
 ```console
-python3 app.py
+gunicorn -w 2 -b 0.0.0.0:5800 app:app
 ```
 
 ```console
-http://127.0.0.1:9123
+http://0.0.0.0:5800
 ```
 
 ## Usage
 
-* Add more cheat sheets in .json and it will read them automatically
+* Cheat sheets are sorted and named  as (Theme)
 
-* Add more cheat sheets by
+* click create new (Theme) and it will be made inside of the Mysqlite
 
-* make a .json file with the desired cheat sheet with commands and description
+* Can also remove any any (Theme) made via CRUD buttons on the website 
 
-* Then name it as shown below and it will read it automatically. remember to replace the CHANGEME with the cheat sheet name
+* Or you can delete one entry at a time 
 
-* CHANGEME_cheatsheet.json
 
-* and save the new_cheatsheet.json to the same dir as the others  
+
+* All functions are on the (web-UI)   
 
 
 
 
 ## Key Features
 
-* Can search by three manners
+* No configuration needed 
 
-* Command, Description, Code Language filter,
+* Can add remove commands or whole cheat sheets
 
 * Easy to understand menu
 

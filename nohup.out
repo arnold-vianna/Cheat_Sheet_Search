@@ -1,7 +1,0 @@
-[2024-02-14 16:45:07 -0300] [578347] [INFO] Starting gunicorn 21.2.0
-[2024-02-14 16:45:07 -0300] [578347] [INFO] Listening at: http://192.168.1.4:8000 (578347)
-[2024-02-14 16:45:07 -0300] [578347] [INFO] Using worker: sync
-[2024-02-14 16:45:07 -0300] [578349] [INFO] Booting worker with pid: 578349
-[2024-02-14 16:45:07 -0300] [578351] [INFO] Booting worker with pid: 578351
-[2024-02-14 16:45:07 -0300] [578359] [INFO] Booting worker with pid: 578359
-[2024-02-14 16:45:07 -0300] [578360] [INFO] Booting worker with pid: 578360
