@@ -33,11 +33,11 @@ docker pull arnoldvianna/cheat_sheet
 ```
 
 ```console
-docker run -d -p 5051:5000 arnoldvianna/cheat_sheet
+docker run -d -p 8010:8010 arnoldvianna/cheat_sheet
 ```
 
 ```console
-http://0.0.0.0:5051/
+http://0.0.0.0:8010/
 ```
 
 
@@ -58,7 +58,7 @@ docker-compose up -d
 ```
 
 ```console
-http://127.0.0.1:5100/
+http://127.0.0.1:8010/
 ```
 
 
