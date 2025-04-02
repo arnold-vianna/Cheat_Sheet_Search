@@ -34,8 +34,8 @@ function search() {
                 <div class="col-md-4 mb-4">
                     <div class="card text-light position-relative">
                         <div class="card-body">
-                            <h5 class="card-title">${item.command}</h5>
-                            <p class="card-text">${item.description}</p>
+                            <h5 class="card-title">${item.description}</h5>
+                            <p class="card-text">${item.command}</p>
                             <p class="card-text"><small class="text-muted">Theme: ${item.theme}</small></p>
                             <button class="btn btn-sm btn-primary btn-copy" onclick="copyToClipboard('${escapedCommand}')">Copy</button>
                             <button class="btn btn-sm btn-danger btn-remove" onclick="deleteCommand('${escapedTheme}', '${escapedCommand}', '${escapedDescription}')">Remove</button>

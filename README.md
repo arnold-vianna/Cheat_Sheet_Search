@@ -25,7 +25,7 @@
 
 
 
-## Install Via Docker Without The Github Repo
+## Install Via Docker HUB
 
 
 ```console
@@ -54,14 +54,16 @@ cd Cheat_Sheet_Search
 ```
 
 ```console
-docker-compose up -d
+sudo docker build -t cheat-sheet .
 ```
 
 ```console
-http://127.0.0.1:8010/
+sudo docker run -d -p 8010:8010 --name cheat-sheet-instance cheat-sheet
 ```
 
-
+```console
+http://0.0.0.0:8010
+```
 
 
 

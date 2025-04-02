@@ -1,0 +1,114 @@
+/* Set the overall page to a dark theme */
+.dark-theme {
+    background-color: #1a1a1a; /* Dark background for the entire page */
+    color: #ffffff; /* White text for the entire page */
+}
+
+/* Override Bootstrap card styles for the dark theme */
+.dark-theme .card {
+    background-color: #2c2c2c; /* Dark background for cards */
+    border: 1px solid #444; /* Slightly lighter border for visibility */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem; /* Add padding inside the card */
+}
+
+/* Ensure the description (now .card-title) is larger */
+.dark-theme .card .card-title {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.25rem; /* Larger text for the description */
+}
+
+/* Ensure the command (now .card-text) is smaller */
+.dark-theme .card .card-text {
+    color: #ffffff; /* Match the screenshot's white command text */
+    font-size: 1rem; /* Smaller text for the command */
+    font-weight: 500; /* Slightly bold to match the screenshot */
+    margin-bottom: 0.5rem; /* Add some spacing between command and theme */
+}
+
+/* Keep the theme text muted and small */
+.dark-theme .text-muted {
+    color: #bbbbbb !important;
+    font-size: 0.875rem; /* Small text for the theme */
+}
+
+/* Ensure buttons are visible and styled appropriately */
+.dark-theme .btn-primary {
+    background-color: #007bff; /* Blue for primary buttons */
+    border-color: #007bff;
+}
+
+.dark-theme .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+
+.dark-theme .btn-danger {
+    background-color: #dc3545; /* Red for danger buttons */
+    border-color: #dc3545;
+}
+
+.dark-theme .btn-danger:hover {
+    background-color: #bd2130; /* Darker red on hover */
+    border-color: #bd2130;
+}
+
+.dark-theme .btn-secondary {
+    background-color: #555; /* Gray for secondary buttons like "Clear" */
+    color: #ffffff;
+    border-color: #555;
+}
+
+.dark-theme .btn-secondary:hover {
+    background-color: #666; /* Slightly lighter gray on hover */
+    border-color: #666;
+}
+
+/* Style input fields and dropdowns for the dark theme */
+.dark-theme input,
+.dark-theme select,
+.dark-theme textarea {
+    background-color: #333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+.dark-theme select {
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom white arrow */
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    padding-right: 1.5rem; /* Space for the arrow */
+}
+
+.dark-theme select:hover,
+.dark-theme select:focus {
+    border-color: #777; /* Slightly lighter border on hover/focus */
+    outline: none;
+}
+
+.dark-theme input::placeholder,
+.dark-theme textarea::placeholder {
+    color: #aaaaaa;
+}
+
+/* Style modal for dark theme */
+.dark-theme .modal-content {
+    background-color: #2c2c2c;
+    color: #ffffff;
+}
+
+.dark-theme .modal-header,
+.dark-theme .modal-footer {
+    border-color: #444;
+}
+
+.dark-theme .modal-header .close {
+    color: #ffffff;
+    opacity: 0.8;
+}
+
+.dark-theme .modal-header .close:hover {
+    opacity: 1;
+}
